@@ -1,2 +1,2 @@
 language: csharp
-solutions: GameOfLife.sln
+solution: GameOfLife.sln
