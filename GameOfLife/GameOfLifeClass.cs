@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace GameOfLife
 {
-    class GameOfLifeClass
+    public class GameOfLifeClass
     {
         const int BORN_NUM = 3;
         const int STAY_ALIVE_NUM = 2; // and 3
