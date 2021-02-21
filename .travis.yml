@@ -1,8 +1,7 @@
 language: csharp
-solution: GameOfLife.sln
-install:
-  - nuget restore GameOfLife.sln
-  - nuget install NUnit.Runners -Version 3.8.0 -OutputDirectory testrunner
+mono: none
+dotnet: 2.0.0
 script:
-  - msbuild /p:Configuration=Release GameOfLife.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.8.0/tools/nunit3-console.exe ./GameOfLife.Tests/bin/Release/GameOfLife.Tests.dll
+ - dotnet restore
+ - dotnet build
+ - dotnet test ./GameOfLife.Tests/GameOfLife.Tests.csproj
